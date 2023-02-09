@@ -33,9 +33,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let request = VNCoreMLRequest(model: model) { request, error in
             guard let results = request.results as? [VNClassificationObservation],
-                let topResult = results.first
-                else {
-                    fatalError("unexpected result type from VNCoreMLRequest")
+                  let topResult = results.first
+            else {
+                fatalError("unexpected result type from VNCoreMLRequest")
             }
             
             if topResult.identifier.contains("hotdog") {
