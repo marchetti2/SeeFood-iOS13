@@ -25,7 +25,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func detect(image: CIImage) {
-        
         // Load the ML model through its generated class
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("can't load ML model")
@@ -78,7 +77,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
-        
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
