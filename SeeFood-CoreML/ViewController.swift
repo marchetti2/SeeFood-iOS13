@@ -19,9 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imagePicker.delegate = self
-        
     }
     
     func detect(image: CIImage) {
